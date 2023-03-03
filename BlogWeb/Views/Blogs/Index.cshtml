@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BlogWeb.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TieuDe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnhTieuDe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoiDung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoView)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.XuatBan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LyDoKhoa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnhTieuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoView)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.XuatBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Khoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LyDoKhoa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
