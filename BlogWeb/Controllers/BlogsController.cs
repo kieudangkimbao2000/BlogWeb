@@ -22,7 +22,7 @@ namespace BlogWeb.Controllers
         // GET: Blogs
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Blog.ToListAsync());
+            return View(await _context.Blog.ToListAsync());
         }
 
         // GET: Blogs/Details/5

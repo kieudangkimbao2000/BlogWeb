@@ -20,10 +20,18 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">New</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Hot">Hot</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownCategory" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownCategory">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Category" asp-route-id="1">Life</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Category" asp-route-id="2">Sport</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Category" asp-route-id="3">Food</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

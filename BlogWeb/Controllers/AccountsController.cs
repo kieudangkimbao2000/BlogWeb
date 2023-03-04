@@ -22,7 +22,7 @@ namespace BlogWeb.Controllers
         // GET: Accounts
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Account.ToListAsync());
+              return View(await _context.Account.ToListAsync());
         }
 
         // GET: Accounts/Details/5
@@ -148,14 +148,14 @@ namespace BlogWeb.Controllers
             {
                 _context.Account.Remove(account);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AccountExists(int id)
         {
-            return _context.Account.Any(e => e.Id == id);
+          return _context.Account.Any(e => e.Id == id);
         }
     }
 }

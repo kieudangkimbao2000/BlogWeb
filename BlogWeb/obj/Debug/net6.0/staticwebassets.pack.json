@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\BlogWeb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\Uploads\\1.png",
+      "PackagePath": "staticwebassets\\Uploads\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\Uploads\\2.png",
+      "PackagePath": "staticwebassets\\Uploads\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\Uploads\\3.png",
+      "PackagePath": "staticwebassets\\Uploads\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\Uploads\\4.png",
+      "PackagePath": "staticwebassets\\Uploads\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\Uploads\\5.png",
+      "PackagePath": "staticwebassets\\Uploads\\5.png"
+    },
+    {
       "Id": "C:\\Users\\kieud\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

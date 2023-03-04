@@ -14,7 +14,7 @@ namespace BlogWeb.Models
         [MaxLength(20)]
         [MinLength(8)]
         public string MatKhau { get; set; }
-        public byte[]? AnhDaiDien { get; set; }
+        public string? AnhDaiDien { get; set; }
         [MaxLength(50)]
         public string? HoTen { get; set; }
         public bool GioiTinh { get; set; } = true;
@@ -27,9 +27,10 @@ namespace BlogWeb.Models
         [MaxLength(50)]
         public string? Email { get; set; }
         public bool Khoa { get; set; } = false;
-        public string LyDoKhoa { get; set; }
+        public string? LyDoKhoa { get; set; }
         public bool Admin { get; set; } = false;
 
-        public Comment Comment { get; set; }
+        public ICollection<Blog> Blogs { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }
