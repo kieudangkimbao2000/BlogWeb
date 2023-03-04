@@ -9,7 +9,7 @@ namespace BlogWeb.Models
         [Required]
         public string NoiDung { get; set; }
 
-        public ICollection<Account> Accounts { get; set;}
-        public ICollection<Blog> Blogs { get; set;}
+        public Account? Account { get; set;}
+        public Blog? Blog { get; set;}
     }
 }
