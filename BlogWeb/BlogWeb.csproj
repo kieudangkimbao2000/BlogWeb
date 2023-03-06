@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Uploads\1.png" />
+    <None Include="wwwroot\Uploads\2.png" />
+    <None Include="wwwroot\Uploads\3.png" />
+    <None Include="wwwroot\Uploads\4.png" />
+    <None Include="wwwroot\Uploads\5.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

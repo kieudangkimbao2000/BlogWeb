@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using BlogWeb.Data;
+using BlogWeb.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BlogWebContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BlogWebContext") ?? throw new InvalidOperationException("Connection string 'BlogWebContext' not found.")));
@@ -9,6 +11,12 @@ builder.Services.AddDbContext<BlogWebContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
