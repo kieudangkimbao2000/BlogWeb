@@ -19,7 +19,7 @@ namespace BlogWeb.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<Blog> Blogs = await _context.Blog.ToListAsync();
+            List<Blog> Blogs = await _context.Blog.Include(b => b.Account).ToListAsync();
             foreach (Blog blog in Blogs)
             {
                 int i = 300;
@@ -43,6 +43,13 @@ namespace BlogWeb.Controllers
         public IActionResult Category(int id) 
         {
             return View();
+        }
+
+        public IActionResult Detail(int id)
+        {
+            Blog blog = (from b in _context.Blog.Include("Account") where b.Id == id select b).FirstOrDefault();
+
+            return View(blog);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
