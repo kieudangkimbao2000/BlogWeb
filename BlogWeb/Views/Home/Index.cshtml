@@ -11,7 +11,7 @@
                 <img src="@item.AnhTieuDe" class="img-thumbnail rounded border-0" />
                 <div style="position: absolute; left: 0; bottom: 0; width: 100%;" class="bg-white">
                     <a class="h3 text-black text-decoration-none" asp-action="Detail" asp-route-id="@item.Id">@item.TieuDe</a>
-                    <p style="font-size: 10px;" class="text-muted">Ngày: @item.NgayXuatBan</p>
+                    <p style="font-size: 10px;" class="text-muted">@item.Account.TenTaiKhoan   @item.NgayXuatBan</p>
                     <div style="height: 100px;" class="text-start ps-2 pe-2">@item.NoiDung</div>
                 </div>
             </div>
